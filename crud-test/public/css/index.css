@@ -41,10 +41,22 @@ a {
   font-size: 18px;
 }
 
-.btn_alterar {
+.btn_mais {
   background-color: green;
   height: 20px;
-  width: 60px;
+  width: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: white;
+}
+
+.btn_menos {
+  background-color: darkred;
+  height: 20px;
+  width: 30px;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -80,7 +92,25 @@ td {
 
 .qnt {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   column-gap: 10px;
-  height: 32px;
+  height: 36px;
+}
+
+.manager{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.trash{
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(47deg) brightness(109%) contrast(101%);
+  }
+
+.trashbutton {
+  background-color: darkred;
+  border: 0;
+  border-radius: 20px;
+  height: 20px;
 }

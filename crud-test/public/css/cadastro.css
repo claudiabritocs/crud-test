@@ -47,3 +47,24 @@ input[type=submit] {
   margin-top: 10px;
   height: 28px;
 }
+
+.btn_voltar {
+  width: 100px;
+  height: 35px;
+  background-color: #1A2E21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.a_btn {
+  color: white;
+  font-family: 'Roboto';
+  text-decoration: none;
+}
+
+.a_btn:hover {
+  color: white;
+}

@@ -16,30 +16,32 @@
 <body>
   <section>
     
-    <h2>Cadastro de Produtos - CRUD Teste</h2>
+    <h2>Atualizar Produtos - CRUD Teste</h2>
     
     <div class="center">
       
-      <form action="{{ route('store')}}" method="post">
+      <form action="{{ route('update', ['id' => $id->id]) }}" method="post">
         @csrf
+        @method('PUT')
         <label for="">SKU (Código):</label>
-        <input type="text" name="SKU">
+        <input type="text" name="SKU" value="{{$id->SKU}}">
         <br>
         <label for="">Nome do Produto:</label>
-        <input type="text" name="nome">
+        <input type="text" name="nome" value="{{$id->nome}}">
         <br>
         <label for="">Quantidade:</label>
-        <input type="number" name="quantidade">
+        <input type="number" name="quantidade" value="{{$id->quantidade}}">
         <br>
         <input type="hidden" name="sistema" value="0">
-        <input type="submit" value="Cadastrar Produto">
+        <input type="submit" value="Atualizar Produto">
       </form>
 
       <div class="btn_voltar">
         <a href="{{ route('index') }}" class="a_btn">
-        <div>
-          VOLTAR
-      </div></a>
+          <div>
+            VOLTAR
+          </div></a>
+      </div>
     
     </div>
   </section>

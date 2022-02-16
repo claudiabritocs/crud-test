@@ -18,7 +18,7 @@
     <div class="center">
       <h1>Produtos - App Teste</h1>
       <div class="a_novo">
-        <a href=""><div class="btn_novo">
+        <a href="/cadastro"><div class="btn_novo">
             NOVO PRODUTO
         </div></a>
       </div>
@@ -34,16 +34,28 @@
           <td>{{ $produto->SKU }}</td>
           <td>{{ $produto->nome }}</td>
           <td class="qnt">
+            <a href="{{ route('editar.list', $produto->id)}}" class="a_alterar">
+              <div class="btn_menos">
+                -
+              </div>
+            </a>
             {{ $produto->quantidade }}
-            <a href="{{ route('editar')}}" class="a_alterar">
-              <div class="btn_alterar">
-                ALTERAR
+            <a href="{{ route('editar.list2', $produto->id)}}" class="a_alterar">
+              <div class="btn_mais">
+                +
               </div>
             </a>
           </td>
           <td>
-            <a href=""><ion-icon name="build"></ion-icon></a>
-            <a href=""><ion-icon name="trash"></ion-icon></a>
+            <div class="manager">
+              <a href="{{ route('atualizar', $produto->id) }}"><ion-icon name="build"></ion-icon></a>
+
+              <form action="{{ route('destroy', $produto->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="trashbutton"><ion-icon name="trash" class="trash"></ion-icon></button>
+              </form>
+            </div>
           </td>
         </tr>
         @endforeach
