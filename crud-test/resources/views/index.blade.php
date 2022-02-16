@@ -35,7 +35,7 @@
           <td>{{ $produto->nome }}</td>
           <td class="qnt">
             {{ $produto->quantidade }}
-            <a href="" class="a_alterar">
+            <a href="{{ route('editar')}}" class="a_alterar">
               <div class="btn_alterar">
                 ALTERAR
               </div>

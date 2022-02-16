@@ -10,26 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
   <title>Cadastro de Produtos - CRUD Teste</title>
 </head>
 <body>
   <section>
+    
+    <h2>Cadastro de Produtos - CRUD Teste</h2>
+    
     <div class="center">
       
-    <form action="" method="">
-      @csrf
-      <label for="">Código de Identificação do Produto (SKU):</label>
-      <input type="text" name="SKU">
-
-      <label for="">Nome do Produto:</label>
-      <input type="text" name="nome">
-
-      <label for="">Quantidade:</label>
-      <input type="text" name="quantidade">
-
-      <input type="submit" value="Cadastrar Produto">
-    </form>
+      <form action="" method="">
+        @csrf
+        <label for="">SKU (Código):</label>
+        <input type="text" name="SKU">
+        <br>
+        <label for="">Nome do Produto:</label>
+        <input type="text" name="nome">
+        <br>
+        <label for="">Quantidade:</label>
+        <input type="number" name="quantidade">
+        <br>
+        <input type="submit" value="Cadastrar Produto">
+      </form>
     
     </div>
   </section>

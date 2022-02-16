@@ -67,6 +67,10 @@ th {
   font-weight: 900;
 }
 
+tr {
+  background-color: whitesmoke;
+}
+
 td {
   text-align: center;
   font-size: 17px;
@@ -80,43 +84,3 @@ td {
   column-gap: 10px;
   height: 32px;
 }
-
-/* table {
-  background-color: brown;
-}
-
-th {
-  font-size: 40px;
-
-}
-
-.cabecalho {
-  display: flex;
-  column-gap: 50px;
-  font-size: 35px;
-}
-
-.linha {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-}
-
-.item1 {
-  margin-left: 10px; 
-}
-
-.item2 {
-  margin-left: 80px; 
-}
-
-.item3 {
-  margin-left: 140px; 
-}
-
-.item4 {
-  margin-left: 100px;
-  display: flex;
-  width: 245px;
-  justify-content: space-around;
-} */

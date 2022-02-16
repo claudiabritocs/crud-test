@@ -33,4 +33,7 @@ Route::get('/cadastro', [CadastroController::class, 'index'])
 Route::get('/editar', [EditarController::class, 'index'])
     ->middleware(['auth'])->name('editar');
 
+Route::get('/editar/{id}', [EditarController::class, 'index'])
+    ->middleware(['auth'])->name('editar.list');
+
 require __DIR__.'/auth.php';
