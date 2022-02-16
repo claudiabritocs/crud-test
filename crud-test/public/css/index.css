@@ -1,0 +1,45 @@
+table {
+  background-color: brown;
+}
+
+th {
+  font-size: 40px;
+
+}
+
+.center {
+  width: 800px;
+  display: block;
+  margin: 200px auto 0;
+}
+
+.cabecalho {
+  display: flex;
+  column-gap: 50px;
+  font-size: 35px;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.item1 {
+  margin-left: 10px; 
+}
+
+.item2 {
+  margin-left: 80px; 
+}
+
+.item3 {
+  margin-left: 140px; 
+}
+
+.item4 {
+  margin-left: 100px;
+  display: flex;
+  width: 245px;
+  justify-content: space-around;
+}
