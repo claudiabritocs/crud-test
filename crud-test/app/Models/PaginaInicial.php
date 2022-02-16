@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class PaginaInicial extends Model
 {
     use HasFactory;
+
+    protected $table = 'produtos';
+
+    protected $guarded = ['id'];
 }

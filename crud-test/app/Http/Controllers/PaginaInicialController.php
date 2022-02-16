@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PaginaInicial;
 
 class PaginaInicialController extends Controller
 {
@@ -15,7 +16,9 @@ class PaginaInicialController extends Controller
 
     public function index()
     {
-        return view('index');
+        $produtos = PaginaInicial::all();
+
+        return view('index', compact('produtos'));
     }
 
 }

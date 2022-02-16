@@ -1,16 +1,84 @@
-table {
+body {
+  background-color: aliceblue;
+}
+
+.center {
+  width: 900px;
+  display: block;
+  margin: 200px auto 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.a_novo{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.btn_novo {
+  background-color: green;
+  height: 35px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.btn_alterar {
+  background-color: green;
+  height: 20px;
+  width: 60px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  color: white;
+}
+
+.a_alterar {
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+th {
+  background-color: lightgreen!important;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 900;
+}
+
+td {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.qnt {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  height: 38px;
+}
+
+/* table {
   background-color: brown;
 }
 
 th {
   font-size: 40px;
 
-}
-
-.center {
-  width: 800px;
-  display: block;
-  margin: 200px auto 0;
 }
 
 .cabecalho {
@@ -42,4 +110,4 @@ th {
   display: flex;
   width: 245px;
   justify-content: space-around;
-}
+} */
