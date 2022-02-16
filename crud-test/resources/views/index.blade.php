@@ -14,9 +14,9 @@
   <title>Consulta de Produtos - CRUD Teste</title>
 </head>
 <body>
-  <section class="tabelaPrincipal">
+  <section>
     <div class="center">
-      
+      <h1>Produtos - App Teste</h1>
       <div class="a_novo">
         <a href=""><div class="btn_novo">
             NOVO PRODUTO
@@ -38,7 +38,8 @@
             <a href="" class="a_alterar">
               <div class="btn_alterar">
                 ALTERAR
-              </div></a>
+              </div>
+            </a>
           </td>
           <td>
             <a href=""><ion-icon name="build"></ion-icon></a>

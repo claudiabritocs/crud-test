@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginaInicialController;
+use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\EditarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +26,11 @@ use App\Http\Controllers\PaginaInicialController;
 
 Route::get('/', [PaginaInicialController::class, 'index'])
     ->middleware(['auth'])->name('index');
+
+Route::get('/cadastro', [CadastroController::class, 'index'])
+    ->middleware(['auth'])->name('cadastro');
+
+Route::get('/editar', [EditarController::class, 'index'])
+    ->middleware(['auth'])->name('editar');
 
 require __DIR__.'/auth.php';
