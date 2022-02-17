@@ -100,3 +100,23 @@ input[type=submit] {
 .a_btn:hover {
   color: white;
 }
+
+.errorbody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+.error{
+  color: white;
+  background-color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 70%;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Roboto';
+}

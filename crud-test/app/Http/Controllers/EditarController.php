@@ -39,5 +39,61 @@ class EditarController extends Controller
         return redirect()->route('index');
     }
 
+    public function increment(PaginaInicial $id, Request $request)
+    {
+        //Pegando valor input
+        $valor = new PaginaInicial();
+        $valor->quantidade = $request->quantidade;
+
+        //Pegando valor do banco
+        $bd = PaginaInicial::where('id', [$id->id])->get('quantidade');
+        
+        //Separando o Valores
+        $value1 = $valor->quantidade;
+        $value2 = $bd[0]->quantidade;
+        
+        //Somando Valores
+        $value3 = $value1 + $value2;
+       
+        // dd($valorReal);
+        
+        $id->update([
+            'quantidade' => $value3
+        ]);
+
+        return redirect()->route('index');
+    }
+
+    public function decrement(PaginaInicial $id, Request $request)
+    {
+        //Pegando o valor input
+        $valor = new PaginaInicial();
+        $valor->quantidade = $request->quantidade;
+
+        //Pegando valor do banco
+        $bd = PaginaInicial::where('id', [$id->id])->get('quantidade');
+
+        //Separando o Valores
+        $value1 = $valor->quantidade;
+        $value2 = $bd[0]->quantidade;
+
+        if($value2<$value1)
+        {
+            return view('error');
+        }
+        elseif($value2<100){
+            dd('teste');
+        }
+
+        //Subtraindo Valores
+        $value3 = $value2 - $value1;
+
+        $id->update([
+            'quantidade' => $value3
+        ]);
+
+        return redirect()->route('index');
+    }
+
 
 }

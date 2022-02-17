@@ -25,8 +25,9 @@
         <label>QUANTIDADE ATUAL: {{ $id->quantidade }}</label>
       </div>
 
-        <form class="add" method="">
+        <form class="add" action="{{ route('increment', ['id' => $id->id]) }}" method="post">
           @csrf
+          @method('PUT')
           <h4>ADICIONAR</h4>
           <p>Insira a quantidade a ser adicionada ao estoque.</p>
           <input type="number" name="quantidade">

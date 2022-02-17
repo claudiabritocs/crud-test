@@ -11,38 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
   <link rel="stylesheet" href="{{ asset('css/remover.css') }}">
-  <title>Remover do Estoque - CRUD Teste</title>
+  <script src="{{ asset('js/main.js') }}"></script>
+  <title>Erro - CRUD Teste</title>
 </head>
-<body>
-  <section>
-    <h2>Remover do Estoque - CRUD Teste</h2>
-
-    <div class="center">
-      <h3>DADOS DO PRODUTO</h3>
-      <div class="info">
-        <label>{{ $id->SKU }}</label>
-        <label>{{ $id->nome }}</label>
-        <label>QUANTIDADE ATUAL: {{ $id->quantidade }}</label>
-      </div>
-
-        <form class="rem" action="{{ route('decrement', ['id' => $id->id]) }}" method="post">
-          @csrf
-          @method('PUT')
-          <h4>REMOVER</h4>
-          <p>Insira a quantidade a ser removida do estoque.</p>
-          <input type="number" name="quantidade">
-          <br>
-          <input type="submit" value="Remover quantidade">
-        </form>
-      </div>
-
-      <div class="btn_voltar">
-        <a href="{{ route('index') }}" class="a_btn">
-          <div>
-            VOLTAR
-          </div></a>
-      </div>
-    </div>
-  </section>
+<body class="errorbody">
+  <div class="error">
+    <h1>Não há estoque o suficiente para reduzir essa quantidade!</h1>
+  </div>
 </body>
 </html>

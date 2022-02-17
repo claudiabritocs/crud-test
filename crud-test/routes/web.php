@@ -41,6 +41,9 @@ Route::get('/adicionar/{id}', [EditarController::class, 'index2'])
 Route::get('/atualizar/{id}', [EditarController::class, 'edit'])
     ->middleware(['auth'])->name('atualizar');
 
+Route::get('/error', [EditarController::class, 'error'])
+    ->middleware(['auth'])->name('error');
+
 // ROUTES - POST
 
 Route::post('/store', [CadastroController::class, 'store'])
@@ -52,6 +55,11 @@ Route::post('/store', [CadastroController::class, 'store'])
 Route::put('/update/{id}', [EditarController::class, 'update'])
     ->middleware(['auth'])->name('update');
 
+Route::put('/increment/{id}', [EditarController::class, 'increment'])
+    ->middleware(['auth'])->name('increment');
+
+Route::put('/decrement/{id}', [EditarController::class, 'decrement'])
+    ->middleware(['auth'])->name('decrement');
 
 // ROUTES - DELETE
 
