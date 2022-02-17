@@ -17,10 +17,16 @@
   <section>
     <div class="center">
       <h1>Produtos - App Teste</h1>
-      <div class="a_novo">
-        <a href="/cadastro"><div class="btn_novo">
-            NOVO PRODUTO
-        </div></a>
+      <div class="btns_cima">
+        <div class="a_novo">
+          <a href="/relatorio"><div class="btn_novo">
+              NOVO RELATÓRIO
+          </div></a>
+          <div class="a_novo1">
+          <a href="/cadastro"><div class="btn_novo">
+              NOVO PRODUTO
+          </div></a>
+        </div>
       </div>
 
       <table class="table table-hover">

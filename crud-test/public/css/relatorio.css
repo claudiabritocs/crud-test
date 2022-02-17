@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-family: 'Roboto';
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
 }
 
@@ -25,8 +25,7 @@ h2 {
 
 .table1{
   width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   background-color: whitesmoke;
   padding-top: 20px;
   padding-bottom: 5px;
@@ -34,7 +33,7 @@ h2 {
   padding-right: 2%;
 }
 
-h3{
+h3 {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -43,15 +42,36 @@ h3{
   font-weight: 500;
 }
 
-table{
+table {
   text-align: center;
   border: solid 1px grey; 
 }
 
-th{
+th {
   border: solid 1px grey; 
 }
 
 td {
   border: solid 1px grey; 
+}
+
+.btn_voltar {
+  width: 100px;
+  height: 25px;
+  background-color: #1A2E21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.a_btn {
+  color: white;
+  font-family: 'Roboto';
+  text-decoration: none;
+}
+
+.a_btn:hover {
+  color: white;
 }

@@ -21,13 +21,33 @@ a {
   text-decoration: none;
 }
 
-.a_novo{
+.btns_cima {
+  display: block;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.a_novo {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 10px 0;
 }
 
 .btn_novo {
+  background-color: green;
+  height: 35px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.btn_novo1 {
   background-color: green;
   height: 35px;
   width: 200px;
