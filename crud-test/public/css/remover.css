@@ -72,17 +72,21 @@ input[type=submit] {
   height: 40px;
   width: 95%;
   margin: 12px;
-  background-color: green;
+  background-color: darkred;
   color: white;
   font-size: 30px;
   font-family: 'Roboto';
   border: 0px;
   border-radius: 3px;
+  transition: all .5s;
+}
+input[type=submit]:hover {
+  transform: scale(1.05);
 }
 
 .btn_voltar {
   width: 100px;
-  height: 35px;
+  height: 25px;
   background-color: #1A2E21;
   display: flex;
   justify-content: center;

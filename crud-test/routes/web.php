@@ -44,10 +44,16 @@ Route::get('/atualizar/{id}', [EditarController::class, 'edit'])
 Route::get('/error', [EditarController::class, 'error'])
     ->middleware(['auth'])->name('error');
 
+Route::get('/relatorio', [PaginaInicialController::class, 'relatorio'])
+    ->middleware(['auth'])->name('relatorio');
+
 // ROUTES - POST
 
 Route::post('/store', [CadastroController::class, 'store'])
     ->middleware(['auth'])->name('store');
+
+Route::post('/att', [PaginaInicialController::class, 'store'])
+    ->middleware(['auth'])->name('relatorio.store');
 
 
 // ROUTES - PUT

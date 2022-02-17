@@ -10,63 +10,77 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-  <title>Consulta de Produtos - CRUD Teste</title>
+  <link rel="stylesheet" href="{{ asset('css/relatorio.css') }}">
+  <title>Relatório Diário de Estoque - CRUD Teste</title>
 </head>
 <body>
   <section>
-    <div class="center">
-      <h1>Produtos - App Teste</h1>
-      <div class="a_novo">
-        <a href="/cadastro"><div class="btn_novo">
-            NOVO PRODUTO
-        </div></a>
-      </div>
+    <div class="cabeçalho">
+      <h1>RELATÓRIO DE MOVIMENTAÇÃO DE ESTOQUE</h1>  
+      <h2>DD/MM/YYYY</h2>
+    </div>
 
+    <h3>PRODUTOS INSERIDOS</h3>
+    <div class="table1">
       <table class="table table-hover">
         <th>SKU</th>
         <th>PRODUTO</th>
         <th>ESTOQUE</th>
-        <th>GERENCIAR</th>
+        <th>TIPO</th>
+        <th>SISTEMA</th>
 
-        @foreach ($produtos as $produto)
+        @foreach ($relatorios as $relatorio)
         <tr>
-          <td>{{ $produto->SKU }}</td>
-          <td>{{ $produto->nome }}</td>
-          <td class="qnt">
-            <a href="{{ route('editar.list', $produto->id)}}" class="a_alterar">
-              <div class="btn_menos">
-                -
-              </div>
-            </a>
-            {{ $produto->quantidade }}
-            <a href="{{ route('editar.list2', $produto->id)}}" class="a_alterar">
-              <div class="btn_mais">
-                +
-              </div>
-            </a>
-          </td>
-          <td>
-            <div class="manager">
-              <a href="{{ route('atualizar', $produto->id) }}"><ion-icon name="build"></ion-icon></a>
-
-              <form action="{{ route('destroy', $produto->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="trashbutton"><ion-icon name="trash" class="trash"></ion-icon></button>
-              </form>
-            </div>
-          </td>
+          <td>{{ $relatorio->SKU }}</td>
+          <td>{{ $relatorio->nome }}</td>
+          <td>{{ $relatorio->quantidade }}</td>
+          <td>{{ $relatorio->tipo }}</td>
+          <td>{{ $relatorio->sistema }}</td>
         </tr>
         @endforeach
-
       </table>
-
     </div>
+
+    <h3>PRODUTOS RETIRADOS</h3>
+    <div class="table1">
+      <table class="table table-hover">
+        <th>SKU</th>
+        <th>PRODUTO</th>
+        <th>ESTOQUE</th>
+        <th>TIPO</th>
+        <th>SISTEMA</th>
+
+        @foreach ($relatorios2 as $relatorio)
+        <tr>
+          <td>{{ $relatorio->SKU }}</td>
+          <td>{{ $relatorio->nome }}</td>
+          <td>{{ $relatorio->quantidade }}</td>
+          <td>{{ $relatorio->tipo }}</td>
+          <td>{{ $relatorio->sistema }}</td>
+        </tr>
+        @endforeach
+      </table>
+    </div>
+
+    <h3>PRODUTOS ABAIXO DA QUANTIDADE IDEAL</h3>
+    <div class="table1">
+      <table class="table table-hover">
+        <th>SKU</th>
+        <th>PRODUTO</th>
+        <th>ESTOQUE</th>
+
+        @foreach ($relatorios3 as $relatorio)
+        <tr>
+          <td>{{ $relatorio->SKU }}</td>
+          <td>{{ $relatorio->nome }}</td>
+          <td>{{ $relatorio->quantidade }}</td>
+        </tr>
+        @endforeach
+      </table>
+    </div>
+
   </section>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
-
 </html>

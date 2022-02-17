@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PaginaInicial;
+use App\Models\Relatorio;
 
 class EditarController extends Controller
 {
+    //Para levar à página de adição de produtos ao Estoque
+
     public function index2(PaginaInicial $id) 
     {
         return view('adicionar', compact('id'));
     }
+
+    //Para levar à página de remoção de produtos do Estoque
 
     public function index(PaginaInicial $id) 
     {
@@ -39,6 +44,8 @@ class EditarController extends Controller
         return redirect()->route('index');
     }
 
+    //Para adicionar produtos ao Estoque
+
     public function increment(PaginaInicial $id, Request $request)
     {
         //Pegando valor input
@@ -61,8 +68,24 @@ class EditarController extends Controller
             'quantidade' => $value3
         ]);
 
+        // AQUI GRAVA LA TB
+        
+        $new = PaginaInicial::where('id', [$id->id])->get();
+
+        $novoRelatorio = new Relatorio();
+        $novoRelatorio->SKU = $new[0]->SKU;
+        $novoRelatorio->nome = $new[0]->nome;
+        $novoRelatorio->quantidade = $value1;
+        $novoRelatorio->sistema = $new[0]->sistema;
+        $novoRelatorio->tipo = 'Adição';
+
+        $novoRelatorio->save();
+
+
         return redirect()->route('index');
     }
+
+    //Para remover produtos do Estoque
 
     public function decrement(PaginaInicial $id, Request $request)
     {
@@ -81,9 +104,6 @@ class EditarController extends Controller
         {
             return view('error');
         }
-        elseif($value2<100){
-            dd('teste');
-        }
 
         //Subtraindo Valores
         $value3 = $value2 - $value1;
@@ -92,8 +112,18 @@ class EditarController extends Controller
             'quantidade' => $value3
         ]);
 
+        $new = PaginaInicial::where('id', [$id->id])->get();
+
+        $novoRelatorio = new Relatorio();
+        $novoRelatorio->SKU = $new[0]->SKU;
+        $novoRelatorio->nome = $new[0]->nome;
+        $novoRelatorio->quantidade = $value1;
+        $novoRelatorio->sistema = $new[0]->sistema;
+        $novoRelatorio->tipo = 'Remoção';
+
+        $novoRelatorio->save();
+
         return redirect()->route('index');
     }
-
 
 }
