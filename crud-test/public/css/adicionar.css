@@ -52,7 +52,7 @@ h4 {
 
 .add {
   height: 200px;
-  background-color: lightgreen;
+  background-color: whitesmoke;
   padding: 10px
 }
 
@@ -72,7 +72,7 @@ input[type=submit] {
   height: 40px;
   width: 95%;
   margin: 12px;
-  background-color: darkblue;
+  background-color: darkgreen;
   color: white;
   font-size: 30px;
   font-family: 'Roboto';

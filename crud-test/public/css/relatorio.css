@@ -6,7 +6,6 @@ body {
   margin: 30px auto;
   padding: 20px;
   text-align: center;
-  background-color: lightgreen;
   width: 90%;
 }
 
@@ -16,6 +15,14 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  font-family: 'Roboto';
+  font-weight: 800;
+  font-size: 38px;
+  margin-top: 30px;
+  color: darkgreen;
+}
+
 .calendario {
   display: flex;
   justify-content: center;
@@ -23,8 +30,37 @@ h1 {
   margin: 30px 0 10px;
 }
 
+input[type="submit"] {
+  border: 0;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  height: 35px;
+  width: 175px;
+  background-color: darkolivegreen;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(125, 160, 65);
+}
+
+input[type="date"] {
+  height: 35px;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
 .calendario input {
-  margin-right: 30px;
+  margin: 0 10px;
+}
+
+.calendar {
+  background-color: whitesmoke;
+  border: 2px solid green;
+  height: 80px;
+  padding: 20px;
 }
 
 .table1{

@@ -19,11 +19,11 @@
       <h1>RELATÓRIO DE MOVIMENTAÇÃO DE ESTOQUE</h1>
       <h2>{{ date('d/m/Y', strtotime($dia1)) }}</h2> 
       <div class="calendario">
-        <form action="{{ route('dia.update') }}" method="post">
+        <form action="{{ route('dia.update') }}" method="post" class="calendar">
           @csrf
           @method('PUT')
           <input type="date" name="dia" id="dia">
-          <input type="submit" value="Escolher Data">
+          <input type="submit" value="ESCOLHER DATA">
         </form>
       </div>
     </div>

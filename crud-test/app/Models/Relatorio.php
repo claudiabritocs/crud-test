@@ -12,4 +12,12 @@ class Relatorio extends Model
     protected $table = 'relatorio';
 
     protected $guarded = ['id'];
+
+    protected $fillable = [
+        'SKU',
+        'nome',
+        'quantidade',
+        'tipo',
+        'sistema'
+    ];
 }

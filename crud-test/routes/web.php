@@ -5,6 +5,7 @@ use App\Http\Controllers\PaginaInicialController;
 use App\Http\Controllers\CadastroController;
 use App\Http\Controllers\EditarController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

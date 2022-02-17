@@ -12,4 +12,8 @@ class PaginaInicial extends Model
     protected $table = 'produtos';
 
     protected $guarded = ['id'];
+
+    protected $fillable = [
+        'quantidade',
+    ];
 }
