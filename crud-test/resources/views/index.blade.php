@@ -20,11 +20,11 @@
       <div class="btns_cima">
         <div class="a_novo">
           <a href="/relatorio"><div class="btn_novo">
-              NOVO RELATÓRIO
+            RELATÓRIO
           </div></a>
           <div class="a_novo1">
           <a href="/cadastro"><div class="btn_novo">
-              NOVO PRODUTO
+            NOVO PRODUTO
           </div></a>
         </div>
       </div>

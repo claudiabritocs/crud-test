@@ -67,6 +67,9 @@ Route::put('/increment/{id}', [EditarController::class, 'increment'])
 Route::put('/decrement/{id}', [EditarController::class, 'decrement'])
     ->middleware(['auth'])->name('decrement');
 
+Route::put('/dia', [PaginaInicialController::class, 'diaUpdate'])
+    ->middleware(['auth'])->name('dia.update');
+
 // ROUTES - DELETE
 
 Route::delete('/destroy/{id}', [EditarController::class, 'destroy'])

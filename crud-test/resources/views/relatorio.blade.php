@@ -16,8 +16,16 @@
 <body>
   <section>
     <div class="cabeçalho">
-      <h1>RELATÓRIO DE MOVIMENTAÇÃO DE ESTOQUE</h1>  
-      <h2>DD/MM/YYYY</h2>
+      <h1>RELATÓRIO DE MOVIMENTAÇÃO DE ESTOQUE</h1>
+      <h2>{{ date('d/m/Y', strtotime($dia1)) }}</h2> 
+      <div class="calendario">
+        <form action="{{ route('dia.update') }}" method="post">
+          @csrf
+          @method('PUT')
+          <input type="date" name="dia" id="dia">
+          <input type="submit" value="Escolher Data">
+        </form>
+      </div>
     </div>
 
     <h3>PRODUTOS INSERIDOS</h3>
@@ -67,13 +75,13 @@
       <table class="table table-hover">
         <th>SKU</th>
         <th>PRODUTO</th>
-        <th>ESTOQUE</th>
+        <th class="red">ESTOQUE</th>
 
         @foreach ($relatorios3 as $relatorio)
         <tr>
           <td>{{ $relatorio->SKU }}</td>
           <td>{{ $relatorio->nome }}</td>
-          <td>{{ $relatorio->quantidade }}</td>
+          <td class="red">{{ $relatorio->quantidade }}</td>
         </tr>
         @endforeach
       </table>

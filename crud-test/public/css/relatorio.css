@@ -16,11 +16,15 @@ h1 {
   font-size: 40px;
 }
 
-h2 {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 30px;
-  padding-top: 15px;
+.calendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+
+.calendario input {
+  margin-right: 30px;
 }
 
 .table1{
@@ -74,4 +78,10 @@ td {
 
 .a_btn:hover {
   color: white;
+}
+
+.red {
+  background-color: darkred!important;
+  color: white;
+  font-weight: bold;
 }
