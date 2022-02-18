@@ -14,7 +14,7 @@ Olá, muito prazer! Antes de iniciar o passo-a-passo de como utilizar
 o programa, convido vocês a darem uma olhada no vídeo que eu preparei
 mostrando como o programa funciona! O link dele é este aqui:
 
--aqui-
+https://youtu.be/jcSYakRSLuo
 
 Espero que ele ajude na compreensão do CRUD e do API! :D
 
