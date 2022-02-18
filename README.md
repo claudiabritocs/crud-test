@@ -26,6 +26,9 @@ Obrigada para quem viu até aqui! ;)
 
 | Como Proceder |
 
+Observação inicial:
+Ao abrir o projeto, tenha certeza de estar dentro da pasta crud-test (.../crud-test/crud-test)!
+
 
 
 Login: claudiabrito.pro@gmail.com
