@@ -32,7 +32,7 @@
         <label for="">Quantidade:</label>
         <input type="number" name="quantidade" value="{{$id->quantidade}}">
         <br>
-        <input type="hidden" name="sistema" value="0">
+        <input type="hidden" name="sistema" value="Local">
         <input type="submit" value="Atualizar Produto">
       </form>
 

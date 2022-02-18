@@ -29,6 +29,8 @@ class EditarController extends Controller
 
     public function update(PaginaInicial $id, Request $request)
     {
+
+        try{
         $data = new PaginaInicial();
         // $data = $request->all();
         $data->SKU = $request->SKU;
@@ -46,6 +48,10 @@ class EditarController extends Controller
     
     
         return redirect()->route('index');
+    } catch (\Exception $e) {
+
+        return view('errorsku');
+    }
         
     }
 
