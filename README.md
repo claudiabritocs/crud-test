@@ -29,6 +29,9 @@ Obrigada para quem viu até aqui! ;)
 Observação inicial:
 Ao abrir o projeto, tenha certeza de estar dentro da pasta crud-test (.../crud-test/crud-test)!
 
+Login: claudiabrito.pro@gmail.com
+senha: testecrud123
+
 Banco de dados: mysql
 HOST: Localhost (127.0.0.1)
 Porta: 3306
@@ -42,5 +45,8 @@ php artisan migrate
 php artisan key:generate
 php artisan db:seed
 
-Login: claudiabrito.pro@gmail.com
-senha: testecrud123
+API Endpoints:
+Method: GET http://127.0.0.1:8000/api/solicitar-produtos
+Method: PUT http://127.0.0.1:8000/api/baixar-produtos/1
+Method: PUT http://127.0.0.1:8000/api/adicionar-produtos/1
+
