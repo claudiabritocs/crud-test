@@ -123,4 +123,10 @@ input[type=submit]:hover {
   font-size: 50px;
   text-align: center;
   font-family: 'Roboto';
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+h4 {
+  font-size: 35px;
 }

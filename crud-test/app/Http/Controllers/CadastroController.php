@@ -14,13 +14,21 @@ class CadastroController extends Controller
 
     public function store(Request $request)
     {
-        $novoProduto = new PaginaInicial();
-        $novoProduto->SKU = $request->SKU;
-        $novoProduto->nome = $request->nome;
-        $novoProduto->quantidade = $request->quantidade;
-        $novoProduto->sistema = $request->sistema;
-        $novoProduto->save();
+        try {
 
-        return redirect()->route('index');
+            $novoProduto = new PaginaInicial();
+            $novoProduto->SKU = $request->SKU;
+            $novoProduto->nome = $request->nome;
+            $novoProduto->quantidade = $request->quantidade;
+            $novoProduto->sistema = $request->sistema;
+            $novoProduto->save();
+
+            return redirect()->route('index');
+
+        } catch (\Exception $e) {
+
+            return view('errorsku');
+        }
+
     }
 }

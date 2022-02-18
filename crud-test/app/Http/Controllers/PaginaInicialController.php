@@ -65,17 +65,3 @@ class PaginaInicialController extends Controller
 
 }
 
-
-// APAGAR
-// $resrt > calendario (15/02)
-// $dia = table::where('created_at', $request)->get();
-// $relatorios = Relatorio::where('tipo', 'adição' && 'created_at', $request)->get();
-
-// request 
-// converter formato de banco de dados
-// bater os dados 
-// tabela temp 
-// store dia
-// first com uma linha só
-
-// linha só 
