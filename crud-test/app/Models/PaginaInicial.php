@@ -13,7 +13,7 @@ class PaginaInicial extends Model
 
     protected $guarded = ['id'];
 
-    protected $fillable = [
-        'quantidade',
-    ];
+    // protected $fillable = [
+    //     'quantidade',
+    // ];
 }

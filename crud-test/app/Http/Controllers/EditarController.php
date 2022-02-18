@@ -29,9 +29,21 @@ class EditarController extends Controller
 
     public function update(PaginaInicial $id, Request $request)
     {
-        $data = $request->all();
-
-        $id->update($data);
+        $data = new PaginaInicial();
+        // $data = $request->all();
+        $data->SKU = $request->SKU;
+        $data->nome = $request->nome;
+        $data->quantidade = $request->quantidade;
+        $data->sistema = $request->sistema;
+        
+        $id->update([
+           
+            'SKU' => $data->SKU,
+            'nome' => $data->nome,
+            'quantidade' => $data->quantidade,
+            'sistema' => $data->sistema,
+        ]);
+    
     
         return redirect()->route('index');
         

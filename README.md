@@ -29,7 +29,18 @@ Obrigada para quem viu até aqui! ;)
 Observação inicial:
 Ao abrir o projeto, tenha certeza de estar dentro da pasta crud-test (.../crud-test/crud-test)!
 
+Banco de dados: mysql
+HOST: Localhost (127.0.0.1)
+Porta: 3306
+Nome do banco: crudtest
+Username: root
+Senha: (em branco)
 
+Requisitos:
+composer install
+php artisan migrate
+php artisan key:generate
+php artisan db:seed
 
 Login: claudiabrito.pro@gmail.com
 senha: testecrud123

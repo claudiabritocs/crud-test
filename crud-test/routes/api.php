@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('solicitar-produtos', [ApiController::class, 'index']);
 Route::get('solicitar-produtos/{id}', [ApiController::class, 'show']);
 
-Route::put('baixar-produtos/{id}', [ApiController::class, 'update']);
+Route::put('baixar-produtos/{id}', [ApiController::class, 'update1']);
 Route::put('adicionar-produtos/{id}', [ApiController::class, 'update2']);
 

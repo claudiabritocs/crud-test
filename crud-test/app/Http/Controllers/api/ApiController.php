@@ -26,7 +26,7 @@ class ApiController extends Controller
     }
 
 
-    public function update(Request $request, PaginaInicial $id)
+    public function update1(Request $request, PaginaInicial $id)
     {
        
         //Pegando o valor input
